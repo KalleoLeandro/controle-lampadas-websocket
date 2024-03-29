@@ -1,0 +1,36 @@
+<!--<span>{{receiveMensage}}</span>-->
+<div class="container">
+    <h1 class="titulo">Status Lâmpada</h1>
+    <div class="lampadas">
+        <div class="card"
+            [ngClass]="{'ligado': lampada1 === 'LIGADO', 'desligado': lampada1 === 'DESLIGADO', 'vazio': lampada1 === '' }">
+            <span *ngIf="lampada1">Lâmpada 1: {{lampada1}}</span>
+            <span *ngIf="!lampada1">Sistema Desligado</span>
+        </div>
+        <br>
+        <div class="card"
+            [ngClass]="{'ligado': lampada2 === 'LIGADO', 'desligado': lampada2 === 'DESLIGADO', 'vazio': lampada2 === '' }">
+            <span *ngIf="lampada2">Lâmpada 2: {{lampada2}}</span>
+            <span *ngIf="!lampada1">Sistema Desligado</span>
+        </div>
+        <br>
+        <div class="card"
+            [ngClass]="{'ligado': lampada3 === 'LIGADO', 'desligado': lampada3 === 'DESLIGADO', 'vazio': lampada3 === '' }">
+            <span *ngIf="lampada3">Lâmpada 3: {{lampada3}}</span>
+            <span *ngIf="!lampada1">Sistema Desligado</span>
+        </div>
+        <br>
+        <div class="card"
+            [ngClass]="{'ligado': lampada4 === 'LIGADO', 'desligado': lampada4 === 'DESLIGADO', 'vazio': lampada4 === '' }">
+            <span *ngIf="lampada4">Lâmpada 4: {{lampada4}}</span>
+            <span *ngIf="!lampada1">Sistema Desligado</span>
+        </div>
+        <br>
+    </div>
+    <div class="botoes">
+        <button type="button" class="btn btn-success" (click)="sendMessage('L')">LIGAR</button>
+        <button type="button" class="btn btn-warning" (click)="sendMessage('D')">DESLIGAR</button>
+    </div>
+    <br>
+    <hr>
+</div>
